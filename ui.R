@@ -4,7 +4,9 @@ shinyUI(fluidPage(
   
   # Application title
   titlePanel("Interactive Fit Model Testing"),
-  
+  fluidRow(
+          column(4, offset = 2,"Holzmeister, 15.07.2017")
+  ),
   tabsetPanel(
           #Documentation tab
           tabPanel("Documentation", 
@@ -24,11 +26,12 @@ shinyUI(fluidPage(
                         "<br/>",
                       "density ~ A*conc^B" ,"<br/>",
                       "density ~ A*conc^B-conc+Z*log(conc)","<br/>",
-                      "<br/>",
-                      "The documented code for this Shiny application can be found under
-                      githublink","<br/>",
-                      "Happy fitting!")
-                   )
+                      "<br/>",  "Happy fitting!","<br/>", 
+                      "<br/>", 
+                      "The documented code for this Shiny application can be found under", "<br/>")
+                       ),
+                   h5(a("https://github.com/starbuck0815/FitApplication",href="https://github.com/starbuck0815/FitApplication"))
+                   
                    ),
           
           #Application tab
